@@ -1,0 +1,11 @@
+defaults:
+  -
+    scope:
+      path: ""
+    values:
+      layout: "default"
+excerpt_separator: "<!-- more -->"
+destination: "./docs"
+collections:
+  games:
+    output: true
