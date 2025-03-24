@@ -1,0 +1,39 @@
+---
+title: Games
+permalink: /games/
+layout: nocontainer
+---
+
+<main data-theme="light">
+    <div class="container">
+        <h1>{{ page.title }}</h1>
+    </div>
+    <div class="container">
+        <div class="grid game-grid">
+            <div class="game-image">MOMENTUM</div>
+            <article>
+                <h2>Momentum</h2>
+                <p>Momentum is the core system that powers all of my wargames, providing a shared ruleset that makes it easy to jump between ganes. It uses a simple yet dynamic D6-based mechanic, with a flexible activation system that keeps battles engaging and strategic. While each game built on Momentum adds its own unique mechanics, factions, and scenarios, they all share the same fundamental rules. Once you have learned one, picking up another is quick and intuitive.</p>
+                <p>If you are new to my games, start here. Understanding Momentum will give you a head start in any of the wargames that use it, letting you focus on the action rather than relearning the basics every time.</p>
+            </article>
+        </div>
+    </div>
+    <hr>
+    {% for game in site.games %}
+    {% if game.draft == false %}
+    <div class="container">
+        <div class="grid game-grid">
+            <div class="game-image"></div>
+            <article>
+                <h4 class="game-title">
+                    <a href="{{ game.url }}">
+                        {{ game.title }}
+                    </a>
+                </h4>
+                <p>{{ game.excerpt | markdownify }}</p>
+            </article>
+        </div>
+    </div>
+    {% endif%}
+    {% endfor %}
+</main>

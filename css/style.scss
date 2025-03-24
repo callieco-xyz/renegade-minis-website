@@ -1,0 +1,160 @@
+---
+---
+
+@use "pico" with (
+    $theme-color: "violet",
+    $breakpoints: (
+
+        // Small (landscape phones)
+        // Font size: 17px
+        sm: (
+            breakpoint: 576px,
+            viewport: 510px,
+            root-font-size: 97%,
+        ),
+
+        // Medium (tablets)
+        // Font size: 18px
+        md: (
+            breakpoint: 768px,
+            viewport: 700px,
+            root-font-size: 101%,
+        ),
+
+        // Large
+        // Font size: 19px
+        lg: (
+            breakpoint: 1024px,
+            viewport: 950px,
+            root-font-size: 105%,
+        ),
+
+        // Extra large
+        // Font size: 20px
+        xl: (
+            breakpoint: 1280px,
+            viewport: 1180px,
+            root-font-size: 111%,
+        ),
+
+        // Extra extra large
+        // Font size: 21px
+        xxl: (
+            breakpoint: 1536px,
+            viewport: 1240px,
+            root-font-size: 115%,
+        )
+    )
+);
+
+:root, :host {
+    --pico-font-family-sans-serif: 'Trebuchet MS', system-ui, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, Helvetica, Arial, "Helvetica Neue", sans-serif, var(--pico-font-family-emoji);
+    --pico-line-height: 1.35;
+}
+
+#home {
+    min-height: 100vh;
+    height: auto;
+    display: grid;
+    place-items: center;
+}
+
+#home-logo {
+    display: block;
+    margin: auto;
+    max-width: 440px;
+}
+
+h1, h2, h3 {
+    text-transform: uppercase;
+}
+
+h1 {
+    text-align: center;
+}
+
+main {
+    margin-top: var(--pico-spacing);
+    background-color: var(--pico-background-color);
+}
+
+#main-nav {
+    border-bottom: 1px solid var(--pico-secondary);
+
+    ul {
+        margin: 0 auto;
+        padding: 0;
+    }
+
+    li {
+        font-size: 85%;
+        text-transform: uppercase;
+        font-weight: bold;
+    }
+
+    a {
+        color: var(--pico-secondary);
+        letter-spacing: 1px;
+        text-decoration: none;
+
+        &:hover {
+            color: var(--pico-color);
+        }
+
+        &.active {
+            color: var(--pico-contrast);
+
+            &:hover {
+                color: var(--pico-color);
+            }
+        }
+    }
+}
+
+footer {
+    article {
+        margin: 1rem auto;
+    }
+
+    h6 {
+        margin: 1rem auto;
+        text-align: center;
+    }
+}
+a {
+    text-decoration: none;
+}
+
+.game-image {
+    height: 300px;
+    background-color: var(--pico-primary);
+    margin-bottom: var(--pico-block-spacing-vertical);
+    text-align: center;
+}
+
+@media (min-width: 768px) {
+    .game-grid {
+        grid-template-columns: 1fr 2fr;
+    }
+
+    #main-nav li {
+
+        font-size: 75%;
+    }
+
+    #main-nav a {
+        letter-spacing: 3px;
+    }
+}
+
+@media (min-width: 1080px) {
+
+    .game-grid {
+        grid-template-columns: 1fr 3fr;
+    }
+}
+@media (min-width: 1280px) {
+    .game-grid {
+        grid-template-columns: 1fr 4fr;
+    }
+}

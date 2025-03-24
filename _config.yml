@@ -1,0 +1,12 @@
+destination: "./docs"
+defaults:
+  -
+    scope:
+      path: ""
+    values:
+      layout: "default"
+collections:
+  games:
+    output: true
+    order:
+      - hyperspace-frontier.md

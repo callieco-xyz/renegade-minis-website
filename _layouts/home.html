@@ -1,0 +1,25 @@
+<!doctype html>
+<html lang="en" data-theme="dark">
+  
+{% include head.html %}
+
+<body>
+
+  <header id="home" class="container">
+    <a id="home-logo">
+      <img src="/assets/site_images/logo_text_white_blue_tr.png">
+    </a>
+    {% include nav.html %}
+  </header>
+
+  <main data-theme="light">
+    <div class="container">
+      {{ content }}
+    </div>
+  </main>
+
+  {% include footer.html %}
+
+</body>
+
+</html>
