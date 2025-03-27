@@ -3,18 +3,17 @@ title: Games
 permalink: /games/
 layout: nocontainer
 ---
-
 <main data-theme="light">
     <div class="container">
-        <h1>{{ page.title }}</h1>
-    </div>
-    <div class="container">
         <div class="grid game-grid">
-            <div class="game-image">MOMENTUM</div>
+            <div class="game-image"><a href="/games/momentum/"><img src="/assets/site_images/momentum-logo.png"></a></div>
             <article>
-                <h2>Momentum</h2>
-                <p>Momentum is the core system that powers all of my wargames, providing a shared ruleset that makes it easy to jump between ganes. It uses a simple yet dynamic D6-based mechanic, with a flexible activation system that keeps battles engaging and strategic. While each game built on Momentum adds its own unique mechanics, factions, and scenarios, they all share the same fundamental rules. Once you have learned one, picking up another is quick and intuitive.</p>
-                <p>If you are new to my games, start here. Understanding Momentum will give you a head start in any of the wargames that use it, letting you focus on the action rather than relearning the basics every time.</p>
+                <h4><a href="/games/momentum/">Momentum Games</a></h4>
+                <p>Momentum is the core system behind all my games, offering a shared ruleset that makes it easy to pick
+                    up new games. It features a simple yet dynamic D6 mechanic and a flexible activation system that
+                    keeps battles strategic and engaging. Each game built on Momentum adds unique mechanics, factions,
+                    and scenarios, but the fundamentals remain the same, learn one, and the rest come naturally.</p>
+                <p><a role="button" href="/games/momentum/">New to Momentum games? Start here!</a></p>
             </article>
         </div>
     </div>
@@ -23,7 +22,7 @@ layout: nocontainer
     {% if game.draft == false %}
     <div class="container">
         <div class="grid game-grid">
-            <div class="game-image"></div>
+            <div class="game-image"><a href="{{ game.url }}">{{ game.title }}</a></div>
             <article>
                 <h4 class="game-title">
                     <a href="{{ game.url }}">
@@ -31,6 +30,7 @@ layout: nocontainer
                     </a>
                 </h4>
                 <p>{{ game.excerpt | markdownify }}</p>
+                <p><a role="button" href="{{ game.url }}">Play {{ game.title }}</a></p>
             </article>
         </div>
     </div>

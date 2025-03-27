@@ -2877,8 +2877,6 @@ a {
 }
 
 .game-image {
-  height: 300px;
-  background-color: var(--pico-primary);
   margin-bottom: var(--pico-block-spacing-vertical);
   text-align: center;
 }
