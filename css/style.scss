@@ -47,10 +47,46 @@
     )
 );
 
+// ROOT
+
 :root, :host {
     --pico-font-family-sans-serif: 'Trebuchet MS', system-ui, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, Helvetica, Arial, "Helvetica Neue", sans-serif, var(--pico-font-family-emoji);
     --pico-line-height: 1.35;
 }
+
+// TYPOGRAPHY
+
+h1, h2, h3 {
+    text-transform: uppercase;
+}
+
+h1 {
+    text-align: center;
+}
+
+p.see-more {
+    text-align: right !important;
+    margin: 4px 0;
+    font-weight: bold;
+}
+
+footer {
+    h6 {
+        margin: 1rem auto;
+        text-align: center;
+    }
+}
+
+a {
+    text-decoration: none;
+}
+
+p.caption {
+    margin-top: 3rem;
+    color: var(--pico-muted-color);
+}
+
+// LAYOUT
 
 #home {
     min-height: 100vh;
@@ -65,13 +101,6 @@
     max-width: 440px;
 }
 
-h1, h2, h3 {
-    text-transform: uppercase;
-}
-
-h1 {
-    text-align: center;
-}
 
 main {
     margin-top: var(--pico-spacing);
@@ -111,18 +140,26 @@ main {
     }
 }
 
-footer {
-    article {
-        margin: 1rem auto;
-    }
-
-    h6 {
-        margin: 1rem auto;
-        text-align: center;
-    }
+.home-phys-container {
+    padding: 3rem 0;
+    padding-right: 0;
+    background-color: var(--pico-background-color);
 }
-a {
-    text-decoration: none;
+
+.home-games-container {
+    padding: 3rem 0;
+    padding-right: 0;
+    background-color: var(--pico-background-color);
+}
+
+section {
+    padding-top: var(--pico-spacing);
+    padding-bottom: var(--pico-spacing);
+    padding-left: 0;
+    padding-right: 0;
+    &.home-minis-container {
+        background-color: var(--pico-background-color);
+    }
 }
 
 .game-image {
@@ -132,7 +169,31 @@ a {
     text-align: center;
 }
 
+.home-minis-grid {
+    grid-template-columns: 1fr 1fr;
+    img { 
+        display: block;
+        width: 100%;
+    }
+}
+
+.home-minis-container {
+    p {
+        text-align: center;
+    }
+}
+
+footer {
+    article {
+        margin: 1rem auto;
+    }
+}
+
+
+// MEDIA QUERIES
+
 @media (min-width: 768px) {
+
     .game-grid {
         grid-template-columns: 1fr 2fr;
     }
@@ -145,12 +206,24 @@ a {
     #main-nav a {
         letter-spacing: 3px;
     }
+
+    .home-minis-grid {
+        grid-template-columns: 1fr 1fr 1fr;
+    }
 }
 
 @media (min-width: 1080px) {
 
     .game-grid {
         grid-template-columns: 1fr 3fr;
+    }
+    
+    .home-minis-grid {
+        grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+    }
+    
+    .home-commissions-grid{
+        grid-template-columns: 3fr 2fr;
     }
 }
 @media (min-width: 1280px) {

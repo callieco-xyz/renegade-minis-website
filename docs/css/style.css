@@ -2811,6 +2811,34 @@ textarea,
   --pico-line-height: 1.35;
 }
 
+h1, h2, h3 {
+  text-transform: uppercase;
+}
+
+h1 {
+  text-align: center;
+}
+
+p.see-more {
+  text-align: right !important;
+  margin: 4px 0;
+  font-weight: bold;
+}
+
+footer h6 {
+  margin: 1rem auto;
+  text-align: center;
+}
+
+a {
+  text-decoration: none;
+}
+
+p.caption {
+  margin-top: 3rem;
+  color: var(--pico-muted-color);
+}
+
 #home {
   min-height: 100vh;
   height: auto;
@@ -2822,14 +2850,6 @@ textarea,
   display: block;
   margin: auto;
   max-width: 440px;
-}
-
-h1, h2, h3 {
-  text-transform: uppercase;
-}
-
-h1 {
-  text-align: center;
 }
 
 main {
@@ -2864,21 +2884,47 @@ main {
   color: var(--pico-color);
 }
 
-footer article {
-  margin: 1rem auto;
-}
-footer h6 {
-  margin: 1rem auto;
-  text-align: center;
+.home-phys-container {
+  padding: 3rem 0;
+  padding-right: 0;
+  background-color: var(--pico-background-color);
 }
 
-a {
-  text-decoration: none;
+.home-games-container {
+  padding: 3rem 0;
+  padding-right: 0;
+  background-color: var(--pico-background-color);
+}
+
+section {
+  padding-top: var(--pico-spacing);
+  padding-bottom: var(--pico-spacing);
+  padding-left: 0;
+  padding-right: 0;
+}
+section.home-minis-container {
+  background-color: var(--pico-background-color);
 }
 
 .game-image {
   margin-bottom: var(--pico-block-spacing-vertical);
   text-align: center;
+}
+
+.home-minis-grid {
+  grid-template-columns: 1fr 1fr;
+}
+.home-minis-grid img {
+  display: block;
+  width: 100%;
+}
+
+.home-minis-container p {
+  text-align: center;
+}
+
+footer article {
+  margin: 1rem auto;
 }
 
 @media (min-width: 768px) {
@@ -2891,10 +2937,19 @@ a {
   #main-nav a {
     letter-spacing: 3px;
   }
+  .home-minis-grid {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
 }
 @media (min-width: 1080px) {
   .game-grid {
     grid-template-columns: 1fr 3fr;
+  }
+  .home-minis-grid {
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+  }
+  .home-commissions-grid {
+    grid-template-columns: 3fr 2fr;
   }
 }
 @media (min-width: 1280px) {
