@@ -2,7 +2,7 @@
   link: /
 - name: Games
   link: /games/
-- name: Minis
-  link: /minis/
 - name: Commissions
   link: /commissions
+- name: Shop
+  link: "https://cults3d.com/en/users/renegade-minis/3d-models"

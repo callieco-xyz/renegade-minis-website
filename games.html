@@ -22,7 +22,7 @@ layout: nocontainer
     {% if game.draft == false %}
     <div class="container">
         <div class="grid game-grid">
-            <div class="game-image"><a href="{{ game.url }}">{{ game.title }}</a></div>
+            <div class="game-image"><a href="{{ game.url }}"><img src="{{ game.cover }}"></a></div>
             <article>
                 <h4 class="game-title">
                     <a href="{{ game.url }}">

@@ -1,8 +1,9 @@
 ---
 ---
 
+@use "colors" as *;
 @use "pico" with (
-    $theme-color: "violet",
+    $theme-color: "azure",
     $breakpoints: (
 
         // Small (landscape phones)
@@ -10,7 +11,7 @@
         sm: (
             breakpoint: 576px,
             viewport: 510px,
-            root-font-size: 97%,
+            root-font-size: 103%,
         ),
 
         // Medium (tablets)
@@ -18,7 +19,7 @@
         md: (
             breakpoint: 768px,
             viewport: 700px,
-            root-font-size: 101%,
+            root-font-size: 106%,
         ),
 
         // Large
@@ -26,7 +27,7 @@
         lg: (
             breakpoint: 1024px,
             viewport: 950px,
-            root-font-size: 105%,
+            root-font-size: 111%,
         ),
 
         // Extra large
@@ -34,7 +35,7 @@
         xl: (
             breakpoint: 1280px,
             viewport: 1180px,
-            root-font-size: 111%,
+            root-font-size: 116%,
         ),
 
         // Extra extra large
@@ -42,7 +43,7 @@
         xxl: (
             breakpoint: 1536px,
             viewport: 1240px,
-            root-font-size: 115%,
+            root-font-size: 120%,
         )
     )
 );
@@ -53,7 +54,6 @@
     --pico-font-family-sans-serif: 'Trebuchet MS', system-ui, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, Helvetica, Arial, "Helvetica Neue", sans-serif, var(--pico-font-family-emoji);
     --pico-line-height: 1.35;
 }
-
 // TYPOGRAPHY
 
 h1, h2, h3 {
@@ -86,8 +86,23 @@ p.caption {
     color: var(--pico-muted-color);
 }
 
-// LAYOUT
 
+@media (min-width: 768px) {
+    #main-nav li {
+        font-size: 75%;
+    }
+    #main-nav a {
+        letter-spacing: 3px;
+    }
+}
+
+
+// LAYOUT
+html {
+    min-height: 100%;
+    background: var(--pico-background-color);
+    background: linear-gradient(120deg, var(--pico-background-color) 10%, $azure-850 40%, $azure-950 68%, var(--pico-background-color) 90%);
+}
 #home {
     min-height: 100vh;
     height: auto;
@@ -152,22 +167,47 @@ main {
     background-color: var(--pico-background-color);
 }
 
+.home-commissions-container {
+    background-color: var;
+}
+
 section {
     padding-top: var(--pico-spacing);
     padding-bottom: var(--pico-spacing);
     padding-left: 0;
     padding-right: 0;
     &.home-minis-container {
-        background-color: var(--pico-background-color);
+        background: var(--pico-background-color);
+        background: linear-gradient(120deg, var(--pico-background-color) 0%, $azure-850 80%);
     }
 }
 
 .game-image {
-    //height: 300px;
-    //background-color: var(--pico-primary);
-    margin-bottom: var(--pico-block-spacing-vertical);
-    text-align: center;
+    width: 100%;
 }
+.game-image-small {
+    display: block;
+    width: 100%;
+    margin-bottom: 0;
+}
+.home-minis-container {
+    p {
+        text-align: center;
+    }
+}
+
+.product-page {
+    margin-top: 3rem;
+    margin-bottom: 3rem;
+}
+
+footer {
+    article {
+        margin: 1rem auto;
+    }
+}
+
+// GRIDS
 
 .home-minis-grid {
     grid-template-columns: 1fr 1fr;
@@ -177,20 +217,14 @@ section {
     }
 }
 
-.home-minis-container {
-    p {
-        text-align: center;
+.grid-featured {
+    grid-template-columns: 3fr 2fr;
+
+    img { 
+        display: block;
+        width: 100%;
     }
 }
-
-footer {
-    article {
-        margin: 1rem auto;
-    }
-}
-
-
-// MEDIA QUERIES
 
 @media (min-width: 768px) {
 
@@ -198,34 +232,33 @@ footer {
         grid-template-columns: 1fr 2fr;
     }
 
-    #main-nav li {
-
-        font-size: 75%;
+    .home-game-grid {
+        grid-template-columns: 1fr 2fr;
     }
-
-    #main-nav a {
-        letter-spacing: 3px;
-    }
-
+    
     .home-minis-grid {
         grid-template-columns: 1fr 1fr 1fr;
     }
+    .big-image-grid{
+        grid-template-columns: 1fr;
+    }
 }
 
-@media (min-width: 1080px) {
 
+@media (min-width: 1080px) {
     .game-grid {
         grid-template-columns: 1fr 3fr;
     }
-    
     .home-minis-grid {
         grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
     }
     
-    .home-commissions-grid{
+    .big-image-grid{
         grid-template-columns: 3fr 2fr;
     }
 }
+
+
 @media (min-width: 1280px) {
     .game-grid {
         grid-template-columns: 1fr 4fr;

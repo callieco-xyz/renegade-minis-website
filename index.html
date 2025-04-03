@@ -3,89 +3,19 @@ title: Home
 layout: home
 ---
 
+
+
+<div class="container">
+    <h1>Welcome to Renegade Minis</h1>
+    <p>Hi, I’m Callie, aka Renegade Minis. I’m a Scottish artist making miniatures and tabletop games, usually of the skirmish variety.
+    Most of the miniatures I make are customisable, multi-part kits, and can be used in the games I create or in other systems.
+    I do sometimes choose to make more unique characters, vehicles, monsters, and have been known to make things like terrain, bases, tokens and more.</p>
+    <p>If you're looking for something more custom for your collection, event, or game, I am available for commissions.
+    <a href="/commissions/">Find out more about my commission work and how to get in touch.</a></p>
+</div>
+
 <main data-theme="light">
-    <div class="container">
-        <div class="grid home-top-grid">
-            <div><img src="/assets/site_images/commissions.png"></div>
-            <div><img src="/assets/site_images/commissions.png"></div>
-            <div><img src="/assets/site_images/commissions.png"></div>
-        </div>
-    </div>
-
-
-    <div class="container">
-        <article>
-            <h1>Renegade Minis</h1>
-            <p>Hi, I’m Callie, aka Renegade Minis. I’m a Scottish artist making and self-publishing tabletop games.
-                After spending decades enjoying wargaming and miniature painting, I decided it was time to make and
-                share my own things. Here, you’ll find info about the miniatures and games I make, or you can follow me
-                at <a href="https://bsky.app/profile/renegademinis.bsky.social">@renegademinis.bsky.social</a>.</p>
-            <p>If you're interested in commissions or want to chat about what I’m up to, drop me a message. I’m always
-                up for talking about new ideas, getting feedback, or just talking about miniatures and games. Thanks for
-                stopping by!</p>
-        </article>
-    </div>
-
-
-    <section data-theme="dark" class="home-games-container">
-        <div class="container">
-            <h1>Games</h1>
-            <p>We have a series of games built on our Momentum game system.</p>
-            <div class="grid home-games-grid">
-                <div><img src="/assets/site_images/commissions.png"></div>
-                <div><img src="/assets/site_images/commissions.png"></div>
-                <div><img src="/assets/site_images/commissions.png"></div>
-            </div>
-            <p class="see-more"><a href="/minis/">See more &raquo;</a></p>
-        </div>
-    </section>
-
-    <section data-theme="light" class="home-minis-container">
-        <div class="container">
-            <h1>Digital STL files</h1>
-            <p>Browse our range of miniatures available as digital STL files for sci-fi and fantasy games.</p>
-            <div class="grid home-minis-grid">
-                <div><img src="/assets/site_images/test-image.png"></div>
-                <div><img src="/assets/site_images/test-image.png"></div>
-                <div><img src="/assets/site_images/test-image.png"></div>
-                <div><img src="/assets/site_images/test-image.png"></div>
-                <div><img src="/assets/site_images/test-image.png"></div>
-                <div><img src="/assets/site_images/test-image.png"></div>
-            </div>
-            <p class="see-more"><a href="/minis/">See more &raquo;</a></p>
-        </div>
-    </section>
-
-    <section data-theme="dark" class="home-phys-container">
-        <div class="container">
-            <h1>Physical Miniatures</h1>
-            <p>Browse our range of physical miniature kits.</p>
-            <div class="grid home-minis-grid">
-                <div><img src="/assets/site_images/test-image.png"></div>
-                <div><img src="/assets/site_images/test-image.png"></div>
-                <div><img src="/assets/site_images/test-image.png"></div>
-                <div><img src="/assets/site_images/test-image.png"></div>
-                <div><img src="/assets/site_images/test-image.png"></div>
-                <div><img src="/assets/site_images/test-image.png"></div>
-            </div>
-            <p class="see-more"><a href="/minis/">See more &raquo;</a></p>
-        </div>
-    </section>
-
-    <section data-theme="light" class="home-commissions-container">
-        <div class="container">
-            <h1>Commissions</h1>
-            <div class="grid home-commissions-grid">
-                <div><img src="/assets/site_images/commissions.png"></div>
-                <div>
-                    <h3>Custom Miniatures</h3>
-                    <p>I create custom miniatures that are inspired by the classics, designs that are as fun to paint as they are to display. My focus is on creating pieces that strike a perfect balance: detailed enough to feel special, but not so complicated that the joy of painting gets lost. Whether you’re after something for your game, event, collection, or a unique character, I aim to craft miniatures that capture the charm of old-school designs, while being a pleasure to bring to life with paint.</p>
-                    <p>Interested in a commission? Let’s chat! Drop me an email at callie at renegademinis.com or reach out on BlueSky, @renegademinis.bsky.social, and we’ll talk through your ideas.</p>
-                    <p>Commissions are just one part of the work I do, but I treat every project with the same passion and attention to detail. Together, we’ll create something amazing that fits perfectly into your world.</p>
-                    <p class="caption"><em>Pictured Left: "Glowworm", a custom creation for the Bloodbowl tournament "Thrudball", honouring one of their founding members and raising money for a good cause at the same time.</em></p>
-                </div>
-            </div>
-        </div>
-    </section>
-
+    {% include_relative home_sections/games.html %}
+    {% include_relative home_sections/minis.html %}
+    {% include_relative home_sections/commissions.html %}
 </main>

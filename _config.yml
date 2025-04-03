@@ -10,3 +10,6 @@ collections:
     output: true
     order:
       - hyperspace-frontier.md
+  commissions:
+    output: true
+    sort_by: date_added

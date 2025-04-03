@@ -1,0 +1,43 @@
+
+<section data-theme="light" class="home-games-container">
+    <h1>Explore games</h1>
+    {% for game in site.games %}
+        {% if game.featured == true %}
+            <div class="container">
+                <article>
+                    <div class="grid home-game-grid">
+                        <div class="game-image"><a href="{{ game.url }}"><img class="game-image" src="{{ game.cover }}"></a></div>
+                        <div>
+                            <h4 class="game-title">
+                                <a href="{{ game.url }}">
+                                    Featured Game: {{ game.title }}
+                                </a>
+                            </h4>
+                            {{ game.excerpt | markdownify }}
+                            <p><a role="button" href="{{ game.url }}">Play {{ game.title }}</a></p>
+                        </div>
+                    </div>
+                </article>
+            </div>
+        {% endif%}
+    {% endfor %}
+
+    
+    <div class="container">
+        <div class="grid">
+            <div>
+                <p><a href="/momentum/"><img class="game-image-small" src="/assets/site_images/placeholder.png"></a></p>
+            </div>
+            {% for game in site.games %}
+                {% if game.featured == true %}
+                {% else %}
+                    {% if game.draft == false %}
+                        <div>
+                            <p><a href="{{ game.url }}"><img class="game-image-small" src="{{ game.cover }}"></a></p>
+                        </div>
+                    {% endif %}
+                {% endif%}
+            {% endfor %}
+        </div>
+    </div>
+</section>

@@ -49,31 +49,31 @@
 @media (min-width: 576px) {
   :root,
   :host {
-    --pico-font-size: 97%;
+    --pico-font-size: 103%;
   }
 }
 @media (min-width: 768px) {
   :root,
   :host {
-    --pico-font-size: 101%;
+    --pico-font-size: 106%;
   }
 }
 @media (min-width: 1024px) {
   :root,
   :host {
-    --pico-font-size: 105%;
+    --pico-font-size: 111%;
   }
 }
 @media (min-width: 1280px) {
   :root,
   :host {
-    --pico-font-size: 111%;
+    --pico-font-size: 116%;
   }
 }
 @media (min-width: 1536px) {
   :root,
   :host {
-    --pico-font-size: 115%;
+    --pico-font-size: 120%;
   }
 }
 
@@ -235,18 +235,18 @@ details summary[role=button]:not(.outline)::after {
   color-scheme: light;
   --pico-background-color: #fff;
   --pico-color: #373c44;
-  --pico-text-selection-color: rgba(167, 128, 212, 0.25);
+  --pico-text-selection-color: rgba(2, 154, 232, 0.25);
   --pico-muted-color: #646b79;
   --pico-muted-border-color: rgb(231, 234, 239.5);
-  --pico-primary: #8352c5;
-  --pico-primary-background: #7540bf;
+  --pico-primary: #0172ad;
+  --pico-primary-background: #0172ad;
   --pico-primary-border: var(--pico-primary-background);
-  --pico-primary-underline: rgba(131, 82, 197, 0.5);
-  --pico-primary-hover: #6935b3;
-  --pico-primary-hover-background: #6935b3;
+  --pico-primary-underline: rgba(1, 114, 173, 0.5);
+  --pico-primary-hover: #015887;
+  --pico-primary-hover-background: #02659a;
   --pico-primary-hover-border: var(--pico-primary-hover-background);
   --pico-primary-hover-underline: var(--pico-primary-hover);
-  --pico-primary-focus: rgba(167, 128, 212, 0.5);
+  --pico-primary-focus: rgba(2, 154, 232, 0.5);
   --pico-primary-inverse: #fff;
   --pico-secondary: #5d6b89;
   --pico-secondary-background: #525f7a;
@@ -362,18 +362,18 @@ details summary[role=button]:not(.outline)::after {
     color-scheme: dark;
     --pico-background-color: rgb(19, 22.5, 30.5);
     --pico-color: #c2c7d0;
-    --pico-text-selection-color: rgba(178, 144, 217, 0.1875);
+    --pico-text-selection-color: rgba(1, 170, 255, 0.1875);
     --pico-muted-color: #7b8495;
     --pico-muted-border-color: #202632;
-    --pico-primary: #b290d9;
-    --pico-primary-background: #7540bf;
+    --pico-primary: #01aaff;
+    --pico-primary-background: #0172ad;
     --pico-primary-border: var(--pico-primary-background);
-    --pico-primary-underline: rgba(178, 144, 217, 0.5);
-    --pico-primary-hover: #c9afe4;
-    --pico-primary-hover-background: #8352c5;
+    --pico-primary-underline: rgba(1, 170, 255, 0.5);
+    --pico-primary-hover: #79c0ff;
+    --pico-primary-hover-background: #017fc0;
     --pico-primary-hover-border: var(--pico-primary-hover-background);
     --pico-primary-hover-underline: var(--pico-primary-hover);
-    --pico-primary-focus: rgba(178, 144, 217, 0.375);
+    --pico-primary-focus: rgba(1, 170, 255, 0.375);
     --pico-primary-inverse: #fff;
     --pico-secondary: #969eaf;
     --pico-secondary-background: #525f7a;
@@ -497,18 +497,18 @@ details summary[role=button]:not(.outline)::after {
   color-scheme: dark;
   --pico-background-color: rgb(19, 22.5, 30.5);
   --pico-color: #c2c7d0;
-  --pico-text-selection-color: rgba(178, 144, 217, 0.1875);
+  --pico-text-selection-color: rgba(1, 170, 255, 0.1875);
   --pico-muted-color: #7b8495;
   --pico-muted-border-color: #202632;
-  --pico-primary: #b290d9;
-  --pico-primary-background: #7540bf;
+  --pico-primary: #01aaff;
+  --pico-primary-background: #0172ad;
   --pico-primary-border: var(--pico-primary-background);
-  --pico-primary-underline: rgba(178, 144, 217, 0.5);
-  --pico-primary-hover: #c9afe4;
-  --pico-primary-hover-background: #8352c5;
+  --pico-primary-underline: rgba(1, 170, 255, 0.5);
+  --pico-primary-hover: #79c0ff;
+  --pico-primary-hover-background: #017fc0;
   --pico-primary-hover-border: var(--pico-primary-hover-background);
   --pico-primary-hover-underline: var(--pico-primary-hover);
-  --pico-primary-focus: rgba(178, 144, 217, 0.375);
+  --pico-primary-focus: rgba(1, 170, 255, 0.375);
   --pico-primary-inverse: #fff;
   --pico-secondary: #969eaf;
   --pico-secondary-background: #525f7a;
@@ -2839,6 +2839,20 @@ p.caption {
   color: var(--pico-muted-color);
 }
 
+@media (min-width: 768px) {
+  #main-nav li {
+    font-size: 75%;
+  }
+  #main-nav a {
+    letter-spacing: 3px;
+  }
+}
+html {
+  min-height: 100%;
+  background: var(--pico-background-color);
+  background: linear-gradient(120deg, var(--pico-background-color) 10%, #052940 40%, #04121d 68%, var(--pico-background-color) 90%);
+}
+
 #home {
   min-height: 100vh;
   height: auto;
@@ -2896,6 +2910,10 @@ main {
   background-color: var(--pico-background-color);
 }
 
+.home-commissions-container {
+  background-color: var;
+}
+
 section {
   padding-top: var(--pico-spacing);
   padding-bottom: var(--pico-spacing);
@@ -2903,12 +2921,31 @@ section {
   padding-right: 0;
 }
 section.home-minis-container {
-  background-color: var(--pico-background-color);
+  background: var(--pico-background-color);
+  background: linear-gradient(120deg, var(--pico-background-color) 0%, #052940 80%);
 }
 
 .game-image {
-  margin-bottom: var(--pico-block-spacing-vertical);
+  width: 100%;
+}
+
+.game-image-small {
+  display: block;
+  width: 100%;
+  margin-bottom: 0;
+}
+
+.home-minis-container p {
   text-align: center;
+}
+
+.product-page {
+  margin-top: 3rem;
+  margin-bottom: 3rem;
+}
+
+footer article {
+  margin: 1rem auto;
 }
 
 .home-minis-grid {
@@ -2919,26 +2956,26 @@ section.home-minis-container {
   width: 100%;
 }
 
-.home-minis-container p {
-  text-align: center;
+.grid-featured {
+  grid-template-columns: 3fr 2fr;
 }
-
-footer article {
-  margin: 1rem auto;
+.grid-featured img {
+  display: block;
+  width: 100%;
 }
 
 @media (min-width: 768px) {
   .game-grid {
     grid-template-columns: 1fr 2fr;
   }
-  #main-nav li {
-    font-size: 75%;
-  }
-  #main-nav a {
-    letter-spacing: 3px;
+  .home-game-grid {
+    grid-template-columns: 1fr 2fr;
   }
   .home-minis-grid {
     grid-template-columns: 1fr 1fr 1fr;
+  }
+  .big-image-grid {
+    grid-template-columns: 1fr;
   }
 }
 @media (min-width: 1080px) {
@@ -2948,7 +2985,7 @@ footer article {
   .home-minis-grid {
     grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
   }
-  .home-commissions-grid {
+  .big-image-grid {
     grid-template-columns: 3fr 2fr;
   }
 }
