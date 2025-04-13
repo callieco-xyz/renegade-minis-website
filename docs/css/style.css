@@ -2964,6 +2964,10 @@ footer article {
   width: 100%;
 }
 
+.holding .grid {
+  margin-bottom: var(--pico-spacing);
+}
+
 @media (min-width: 768px) {
   .game-grid {
     grid-template-columns: 1fr 2fr;

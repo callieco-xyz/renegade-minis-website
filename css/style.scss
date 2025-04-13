@@ -226,6 +226,10 @@ footer {
     }
 }
 
+.holding .grid {
+    margin-bottom: var(--pico-spacing);
+}
+
 @media (min-width: 768px) {
 
     .game-grid {
