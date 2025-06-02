@@ -3,19 +3,17 @@ title: Home
 layout: home
 ---
 
+<main data-theme="light">
+{% include_relative home_sections/minis.html %}
 
+<hr>
+
+{% include_relative home_sections/games.html %}
+
+<hr>
 
 <div class="container">
-    <h1>Welcome to Renegade Minis</h1>
-    <p>Hi, I’m Callie, aka Renegade Minis. I’m a Scottish artist making miniatures and tabletop games, usually of the skirmish variety.
-    Most of the miniatures I make are customisable, multi-part kits, and can be used in the games I create or in other systems.
-    I do sometimes choose to make more unique characters, vehicles, monsters, and have been known to make things like terrain, bases, tokens and more.</p>
-    <p>If you're looking for something more custom for your collection, event, or game, I am available for commissions.
-    <a href="/commissions/">Find out more about my commission work and how to get in touch.</a></p>
+    {% include_relative home_sections/commissions.html %}
 </div>
 
-<main data-theme="light">
-    {% include_relative home_sections/games.html %}
-    {% include_relative home_sections/minis.html %}
-    {% include_relative home_sections/commissions.html %}
 </main>

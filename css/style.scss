@@ -17,43 +17,45 @@
         // Medium (tablets)
         // Font size: 18px
         md: (
-            breakpoint: 768px,
-            viewport: 700px,
+            breakpoint: 748px,
+            viewport: 680px,
             root-font-size: 106%,
         ),
 
         // Large
         // Font size: 19px
         lg: (
-            breakpoint: 1024px,
-            viewport: 950px,
+            breakpoint: 880px,
+            viewport: 820px,
             root-font-size: 111%,
         ),
 
         // Extra large
         // Font size: 20px
         xl: (
-            breakpoint: 1280px,
-            viewport: 1180px,
+            breakpoint: 1100px,
+            viewport: 900px,
             root-font-size: 116%,
         ),
 
         // Extra extra large
         // Font size: 21px
         xxl: (
-            breakpoint: 1536px,
-            viewport: 1240px,
+            breakpoint: 1136px,
+            viewport: 1040px,
             root-font-size: 120%,
         )
     )
 );
 
 // ROOT
-
 :root, :host {
     --pico-font-family-sans-serif: 'Trebuchet MS', system-ui, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, Helvetica, Arial, "Helvetica Neue", sans-serif, var(--pico-font-family-emoji);
     --pico-line-height: 1.35;
 }
+
+
+
 // TYPOGRAPHY
 
 h1, h2, h3 {
@@ -62,12 +64,6 @@ h1, h2, h3 {
 
 h1 {
     text-align: center;
-}
-
-p.see-more {
-    text-align: right !important;
-    margin: 4px 0;
-    font-weight: bold;
 }
 
 footer {
@@ -81,28 +77,15 @@ a {
     text-decoration: none;
 }
 
-p.caption {
-    margin-top: 3rem;
-    color: var(--pico-muted-color);
-}
 
 
-@media (min-width: 768px) {
-    #main-nav li {
-        font-size: 75%;
-    }
-    #main-nav a {
-        letter-spacing: 3px;
-    }
-}
-
-
-// LAYOUT
+// LAYOUT and colours
 html {
     min-height: 100%;
     background: var(--pico-background-color);
     background: linear-gradient(120deg, var(--pico-background-color) 10%, $azure-850 40%, $azure-950 68%, var(--pico-background-color) 90%);
 }
+
 #home {
     min-height: 100vh;
     height: auto;
@@ -116,15 +99,8 @@ html {
     max-width: 440px;
 }
 
-
-main {
-    margin-top: var(--pico-spacing);
-    background-color: var(--pico-background-color);
-}
-
 #main-nav {
     border-bottom: 1px solid var(--pico-secondary);
-
     ul {
         margin: 0 auto;
         padding: 0;
@@ -155,116 +131,71 @@ main {
     }
 }
 
-.home-phys-container {
-    padding: 3rem 0;
-    padding-right: 0;
+main {
     background-color: var(--pico-background-color);
-}
-
-.home-games-container {
-    padding: 3rem 0;
-    padding-right: 0;
-    background-color: var(--pico-background-color);
-}
-
-.home-commissions-container {
-    background-color: var;
-}
-
-section {
-    padding-top: var(--pico-spacing);
-    padding-bottom: var(--pico-spacing);
-    padding-left: 0;
-    padding-right: 0;
-    &.home-minis-container {
-        background: var(--pico-background-color);
-        background: linear-gradient(120deg, var(--pico-background-color) 0%, $azure-850 80%);
+    .container {
+        margin-bottom: 1rem;
+        &:last-of-type {
+            margin-bottom: 0;
+        }
     }
 }
 
-.game-image {
-    width: 100%;
+hr {
+    border: none;
+    margin: 2rem auto;
 }
-.game-image-small {
+
+.hero-image img {
     display: block;
+    max-width: 100%;
+    margin: 0 auto 1rem auto;
     width: 100%;
-    margin-bottom: 0;
-}
-.home-minis-container {
-    p {
-        text-align: center;
-    }
 }
 
-.product-page {
-    margin-top: 3rem;
-    margin-bottom: 3rem;
+p.caption {
+    font-size: 90%;
+    margin-bottom: 1rem;
+    text-align: center;
+    font-style: italic;
+    color: var(--pico-muted-color);
 }
 
-footer {
-    article {
-        margin: 1rem auto;
-    }
-}
 
-// GRIDS
 
-.home-minis-grid {
+// GRID LAYOUTS
+
+.product-grid {
     grid-template-columns: 1fr 1fr;
-    img { 
-        display: block;
-        width: 100%;
-    }
 }
 
-.grid-featured {
-    grid-template-columns: 3fr 2fr;
-
-    img { 
-        display: block;
-        width: 100%;
-    }
-}
-
-.holding .grid {
-    margin-bottom: var(--pico-spacing);
+.col2-grid {
+    grid-template-columns: 1fr;
 }
 
 @media (min-width: 768px) {
-
-    .game-grid {
-        grid-template-columns: 1fr 2fr;
+    .footer-grid {
+        grid-template-columns: 2fr 1fr;
     }
-
-    .home-game-grid {
-        grid-template-columns: 1fr 2fr;
-    }
-    
-    .home-minis-grid {
-        grid-template-columns: 1fr 1fr 1fr;
-    }
-    .big-image-grid{
-        grid-template-columns: 1fr;
+    .product-grid {
+        grid-template-columns: 1fr 1fr;
     }
 }
-
 
 @media (min-width: 1080px) {
-    .game-grid {
-        grid-template-columns: 1fr 3fr;
+    .footer-grid {
+        grid-template-columns: 2fr 1fr;
     }
-    .home-minis-grid {
-        grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
-    }
-    
-    .big-image-grid{
-        grid-template-columns: 3fr 2fr;
+    .product-grid {
+        grid-template-columns: 1fr 1fr 1fr;
     }
 }
 
-
 @media (min-width: 1280px) {
-    .game-grid {
-        grid-template-columns: 1fr 4fr;
+    .footer-grid {
+        grid-template-columns: 3fr 1fr;
+    }
+    .product-grid {
+        grid-template-columns: 1fr 1fr 1fr;
     }
 }

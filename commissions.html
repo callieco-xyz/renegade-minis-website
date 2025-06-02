@@ -1,37 +1,35 @@
 ---
 title: Commissions
+permalink: /commissions
 ---
 
-<p>I create custom miniatures that are inspired by the classics, retro designs that are as fun to paint as they are to
-    display. My focus is on creating pieces that strike a perfect balance: detailed enough to feel special, but not so
-    complicated that the joy of painting gets lost. Whether you're after something for your game, event, collection, or
-    a unique character, I aim to craft miniatures that capture the charm of old-school designs, while being a pleasure
-    to bring to life with paint.</p>
-<p>Commissions are just one part of the work I do, but I treat every project with the same passion and attention to
+<p>We take on a limited number of commissions: from individual collectors and event organisers to studios looking to
+    outsource miniature design. Whether it’s a one-off sculpt or a full range, the goal is always the same: bring your
+    vision to life while staying true to the kind of minis we believe in.</p>
+<p>Everything we make is built with personality and made to be fun to paint. We focus on strong clean designs,
+    expressive details, and a style that nods to the hand-sculpted classics while still feeling fresh. If you’re after
+    something with character, something that stands out on the table, we’d love to hear from you.</p>
+<p>Commissions are just one part of the work we do, but we treat every project with the same passion and attention to
     detail. Together, we’ll create something amazing that fits perfectly into your world.</p>
 
 <h4>Interested in having something commissioned?</h4>
-<p>Let’s chat! Drop me an email at <strong>callie [at] renegademinis.com</strong> or reach out on BlueSky,
+<p>Let’s chat! Drop us an email at <strong>info<!-- -->&#64;<!-- -->renegademinis.com</strong> or reach out on BlueSky,
     <strong><a href="https://bsky.app/profile/renegademinis.bsky.social">@renegademinis.bsky.social</a></strong>, and
-    we’ll talk through your ideas.</p>
+    we’ll talk through your ideas.
+</p>
 
-<h2>Commission Testimonials</h2>
-<div class="grid big-image-grid">
-    {% for commission in site.commissions %}
-    <div>
-        <img src="{{ commission.image }}">
-    </div>
-    <div>
-        <article>
-            <hgroup>
-                <h3>{{ commission.title }}</h3>
-                <p><em>{{ commission.subtitle }}</em></p>
-            </hgroup>
-            {{ commission.content | markdownify }}
-            
-        </article>
-        
-        <p><a role="button" href="/commissions/">Find out more about getting a commission</a></p>
-    </div>
+<h2>Previous Commissions</h2>
+<div class="grid col2-grid">
+    {% for commission in site.commissions reversed %}
+    <article>
+        <hgroup>
+            <h3>{{ commission.title }}</h3>
+            <p><em>{{ commission.subtitle }}</em></p>
+        </hgroup>
+        <div class="hero-image">
+            <img src="{{ commission.image }}">
+        </div>
+        {{ commission.content | markdownify }}
+    </article>
     {% endfor %}
 </div>

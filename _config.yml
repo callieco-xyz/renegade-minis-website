@@ -11,5 +11,5 @@ collections:
     order:
       - hyperspace-frontier.md
   commissions:
-    output: true
+    output: false
     sort_by: date_added
