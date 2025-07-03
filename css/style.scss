@@ -3,7 +3,7 @@
 
 @use "colors" as *;
 @use "pico" with (
-    $theme-color: "azure",
+    $theme-color: "jade",
     $breakpoints: (
 
         // Small (landscape phones)
@@ -82,8 +82,7 @@ a {
 // LAYOUT and colours
 html {
     min-height: 100%;
-    background: var(--pico-background-color);
-    background: linear-gradient(120deg, var(--pico-background-color) 10%, $azure-850 40%, $azure-950 68%, var(--pico-background-color) 90%);
+    background: $azure-900;
 }
 
 #home {
