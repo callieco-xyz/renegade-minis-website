@@ -1,3 +1,7 @@
+plugins:
+  - jekyll-paginate
+paginate: 8
+paginate_path: "/news/page:num/"
 destination: "./docs"
 defaults:
   -

@@ -2845,6 +2845,10 @@ html {
   margin: auto;
   max-width: 440px;
 }
+#home-logo img {
+  display: block;
+  margin: 0 auto;
+}
 
 #main-nav {
   border-bottom: 1px solid var(--pico-secondary);
@@ -2871,6 +2875,10 @@ html {
 }
 #main-nav a.active:hover {
   color: var(--pico-color);
+}
+
+.pagination nav ul {
+  margin: 0 auto;
 }
 
 main {

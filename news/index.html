@@ -1,0 +1,70 @@
+---
+title: News
+---
+
+<main data-theme="light">
+    <div class="container">
+        <div>
+          {% for post in paginator.posts %}
+            <article>
+              <hgroup>
+              <h2><a href="{{ post.url }}">{{ post.title }}</a></h2>
+              <p class="date">{{ post.date | date_to_string }}</p>
+            </hgroup>
+            {{ post.excerpt }}
+            <p><a href="{{ post.url }}" class="button">Read more</a></p>
+          </article>
+          {% endfor %}
+        </div>
+    </div>
+</main>
+
+{% if paginator.total_pages > 1 %}
+
+<div class="pagination">
+  <nav>
+    <ul>
+      <li>
+        {% if paginator.previous_page %}
+        <a href="{{ paginator.previous_page_path | relative_url }}" class="previous">Prev</a>
+        {% else %}
+        <span class="previous">Prev</span>
+        {% endif %}
+      </li>
+      {% if paginator.total_pages > 7 %}
+      {% assign currentPage = paginator.page %}
+      {% assign startPage = currentPage | minus: 3 %}
+      {% assign endPage = currentPage | plus: 3 %}
+      {% assign total_pages = paginator.total_pages %}
+
+      {% if startPage < 1 %} {% assign startPage=1 %} {% assign endPage=7 %} {% endif %} {% if endPage> total_pages %}
+        {% assign endPage = total_pages %}
+        {% assign startPage = total_pages | minus: 6 %}
+        {% endif %}
+        {% else %}
+        {% assign startPage = 1 %}
+        {% assign endPage = paginator.total_pages %}
+        {% endif %}
+
+        {% for page in (startPage..endPage) %}
+        <li>
+          {% if page == paginator.page %}
+          <a href="#" class="page active">{{ page }}</a>
+          {% elsif page == 1 %}
+          <a href="/" class="page">{{ page }}</a>
+          {% else %}
+          <a href="{{ site.paginate_path | relative_url | replace: ':num', page }}" class="page">{{ page }}</a>
+          {% endif %}
+        </li>
+        {% endfor %}
+        <li>
+          {% if paginator.next_page %}
+          <a href="{{ paginator.next_page_path | relative_url }}" class="next">Next</a>
+          {% else %}
+          <span class="next">Next</span>
+          {% endif %}
+        </li>
+    </ul>
+  </nav>
+</div>
+{% endif %}

@@ -2,7 +2,13 @@
   link: /
 - name: Games
   link: /games/
+#- name: Forge
+#  link: /forge/
 - name: Commissions
   link: /commissions
-- name: MyMiniFactory
-  link: "https://www.myminifactory.com/users/renegademinis"
+#- name: Terrain
+#  link: #
+#- name: News
+#  link: /news/
+- name: Minis
+  link: https://www.myminifactory.com/users/renegademinis

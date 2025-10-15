@@ -96,6 +96,10 @@ html {
     display: block;
     margin: auto;
     max-width: 440px;
+    img {
+        display: block;
+        margin: 0 auto;
+    }
 }
 
 #main-nav {
@@ -128,6 +132,10 @@ html {
             }
         }
     }
+}
+
+.pagination nav ul {
+    margin: 0 auto
 }
 
 main {
