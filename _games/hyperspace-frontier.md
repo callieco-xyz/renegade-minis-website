@@ -1,6 +1,7 @@
 ---
 title: Hyperspace Frontier
 featured: true
+draft: true
 permalink: /games/hyperspace-frontier
 ---
 

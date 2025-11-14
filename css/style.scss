@@ -148,10 +148,10 @@ html {
 .pagination nav ul {
     margin: 0 auto
 }
-
 main {
     background-color: var(--pico-background-color);
     .container {
+        padding-top: 2rem;
         margin-bottom: 1rem;
         &:last-of-type {
             margin-bottom: 0;
@@ -180,6 +180,12 @@ p.caption {
 }
 
 
+.blog-container {
+    h1 {
+        text-align: left;
+    }
+    max-width: 800px;
+}
 
 // GRID LAYOUTS
 
@@ -194,6 +200,7 @@ p.caption {
 .col2-grid {
     grid-template-columns: 1fr;
 }
+
 
 @media (min-width: 768px) {
     .footer-grid {

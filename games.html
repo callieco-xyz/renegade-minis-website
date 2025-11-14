@@ -2,34 +2,21 @@
 title: Games
 permalink: /games/
 ---
-<main data-theme="light">
-    <div class="container">
-        <div>
-            <article>
-                <h4><a href="/games/momentum/">Momentum Wargames System</a></h4>
-                <p>Momentum is the core system behind our games, offering a common ruleset that makes it easy to pick up
-                    new games. It features a simple yet dynamic D6 mechanic and a flexible activation system that keeps
-                    battles strategic and engaging. Each game built on Momentum adds unique mechanics, factions, and
-                    scenarios, but the fundamentals remain the same, learn one, and the rest come naturally.</p>
-                <p><a href="/games/momentum/">New to Momentum games? Start here!</a></p>
-            </article>
-        </div>
+
+<p>This section coming soon.</p>
+
+{% for game in site.games %}
+{% if game.draft == false %}
+    <div class="grid">
+        <article>
+            <h4>
+                <a href="{{ game.url }}">
+                    {{ game.title }}
+                </a>
+            </h4>
+            <p>{{ game.excerpt | markdownify }}</p>
+            <p><a href="{{ game.url }}">Learn more about {{ game.title }}</a></p>
+        </article>
     </div>
-    {% for game in site.games %}
-    {% if game.draft == false %}
-    <div class="container">
-        <div class="grid">
-            <article>
-                <h4>
-                    <a href="{{ game.url }}">
-                        {{ game.title }}
-                    </a>
-                </h4>
-                <p>{{ game.excerpt | markdownify }}</p>
-                <p><a href="{{ game.url }}">Learn more about {{ game.title }}</a></p>
-            </article>
-        </div>
-    </div>
-    {% endif%}
-    {% endfor %}
-</main>
+{% endif%}
+{% endfor %}

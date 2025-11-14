@@ -2896,6 +2896,7 @@ main {
   background-color: var(--pico-background-color);
 }
 main .container {
+  padding-top: 2rem;
   margin-bottom: 1rem;
 }
 main .container:last-of-type {
@@ -2920,6 +2921,13 @@ p.caption {
   text-align: center;
   font-style: italic;
   color: var(--pico-muted-color);
+}
+
+.blog-container {
+  max-width: 800px;
+}
+.blog-container h1 {
+  text-align: left;
 }
 
 .product-grid {
