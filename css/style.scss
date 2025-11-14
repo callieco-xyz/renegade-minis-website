@@ -3,7 +3,7 @@
 
 @use "colors" as *;
 @use "pico" with (
-    $theme-color: "jade",
+    $theme-color: "pink",
     $breakpoints: (
 
         // Small (landscape phones)
@@ -75,6 +75,12 @@ footer {
 
 a {
     text-decoration: none;
+    img {
+        transition: transform 0.25s ease;
+        &:hover {
+            transform: scale(1.05);
+        }
+    }
 }
 
 
@@ -82,7 +88,7 @@ a {
 // LAYOUT and colours
 html {
     min-height: 100%;
-    background: $azure-900;
+    background: $slate-950;
 }
 
 #home {
@@ -119,9 +125,14 @@ html {
         color: var(--pico-secondary);
         letter-spacing: 1px;
         text-decoration: none;
+            transition: 0.3s ease;
+            transition-property: color, transform;
 
         &:hover {
             color: var(--pico-color);
+            transform: translateY(-2px);
+            transition: 0.3s ease;
+            transition-property: color, transform;
         }
 
         &.active {
@@ -174,6 +185,10 @@ p.caption {
 
 .product-grid {
     grid-template-columns: 1fr 1fr;
+    a {
+        display: block;
+        overflow: hidden;
+    }
 }
 
 .col2-grid {
