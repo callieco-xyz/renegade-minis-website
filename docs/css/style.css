@@ -2930,6 +2930,13 @@ p.caption {
   text-align: left;
 }
 
+footer nav ul.socials {
+  margin: 0 auto;
+}
+footer svg {
+  height: 1rem;
+}
+
 .product-grid {
   grid-template-columns: 1fr 1fr;
 }
@@ -2951,17 +2958,11 @@ p.caption {
   }
 }
 @media (min-width: 1080px) {
-  .footer-grid {
-    grid-template-columns: 2fr 1fr;
-  }
   .product-grid {
     grid-template-columns: 1fr 1fr 1fr;
   }
 }
 @media (min-width: 1280px) {
-  .footer-grid {
-    grid-template-columns: 3fr 1fr;
-  }
   .product-grid {
     grid-template-columns: 1fr 1fr 1fr;
   }
