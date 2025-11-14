@@ -206,6 +206,14 @@ footer {
     }
 }
 
+.minis-grid {
+    grid-template-columns: 1fr;
+    margin-bottom: 1rem;
+    div {
+        display: block;
+        overflow: hidden;
+    }
+}
 .col2-grid {
     grid-template-columns: 1fr;
 }
@@ -218,11 +226,18 @@ footer {
     .product-grid {
         grid-template-columns: 1fr 1fr;
     }
+    .minis-grid {
+        grid-template-columns: 1fr 1fr;
+    }
 }
 
 @media (min-width: 1080px) {
     .product-grid {
         grid-template-columns: 1fr 1fr 1fr;
+    }
+
+    .minis-grid {
+        grid-template-columns: 1fr 1fr 1fr 1fr;
     }
 }
 

@@ -2945,6 +2945,15 @@ footer svg {
   overflow: hidden;
 }
 
+.minis-grid {
+  grid-template-columns: 1fr;
+  margin-bottom: 1rem;
+}
+.minis-grid div {
+  display: block;
+  overflow: hidden;
+}
+
 .col2-grid {
   grid-template-columns: 1fr;
 }
@@ -2956,10 +2965,16 @@ footer svg {
   .product-grid {
     grid-template-columns: 1fr 1fr;
   }
+  .minis-grid {
+    grid-template-columns: 1fr 1fr;
+  }
 }
 @media (min-width: 1080px) {
   .product-grid {
     grid-template-columns: 1fr 1fr 1fr;
+  }
+  .minis-grid {
+    grid-template-columns: 1fr 1fr 1fr 1fr;
   }
 }
 @media (min-width: 1280px) {

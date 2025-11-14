@@ -21,3 +21,6 @@ collections:
   commissions:
     output: false
     sort_by: date_added
+  miniatures:
+    output: false
+    sort_by: order

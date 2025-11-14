@@ -1,0 +1,17 @@
+---
+title: Miniatures
+htmltitle: Printable STL Miniatures from Renegade Minis
+---
+
+{% for mini in site.miniatures %}
+{% if mini.draft == false %}
+    <div class="grid">
+        <article>
+            <h4>
+                {{ mini.title }}
+            </h4>
+            {{ mini.content }}
+        </article>
+    </div>
+{% endif%}
+{% endfor %}
