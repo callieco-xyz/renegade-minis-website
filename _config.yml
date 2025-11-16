@@ -1,7 +1,7 @@
 plugins:
   - jekyll-paginate
 paginate: 8
-paginate_path: "/stories/page:num/"
+paginate_path: "/blog/page:num/"
 destination: "./docs"
 defaults:
   - scope:
@@ -14,6 +14,9 @@ defaults:
     values:
       layout: "default"
 collections:
+  posts:
+    output: true
+    permalink: /:categories/:title
   games:
     output: true
     order:

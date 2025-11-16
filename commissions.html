@@ -1,0 +1,21 @@
+---
+title: Commissions
+permalink: /commissions/
+---
+
+
+{% for comm in site.commissions %}
+{% if comm.draft == false %}
+    <div class="grid">
+        <article>
+            <h4>
+                <a href="{{ comm.url }}">
+                    {{ comm.title }}
+                </a>
+            </h4>
+            <p>{{ comm.excerpt | markdownify }}</p>
+            <p><a href="{{ comm.url }}">Learn more about {{ comm.title }}</a></p>
+        </article>
+    </div>
+{% endif%}
+{% endfor %}

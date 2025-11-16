@@ -2930,6 +2930,14 @@ p.caption {
   text-align: left;
 }
 
+.blog-img {
+  margin-bottom: 2rem;
+}
+.blog-img img {
+  display: block;
+  margin: 0 auto 2rem;
+}
+
 footer nav ul.socials {
   margin: 0 auto;
 }
