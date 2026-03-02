@@ -1,8 +1,9 @@
 plugins:
   - jekyll-paginate
-paginate: 8
+paginate: 6
 paginate_path: "/blog/page:num/"
 destination: "./docs"
+excerpt_separator: <!--more-->
 defaults:
   - scope:
       path: ""

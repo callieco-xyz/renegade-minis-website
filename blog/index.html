@@ -21,8 +21,8 @@ title: Blog
         {% if post.stub %}
           {{ post.content }}
         {% else %}
-          <p><a href="{{ post.url }}" class="button">Read more</a></p>
           {{ post.excerpt }}
+          <p><a href="{{ post.url }}" class="button">Read more</a></p>
         {% endif %}
       </article>
       {% endfor %}

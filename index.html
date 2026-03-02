@@ -3,13 +3,46 @@ htmltitle: Welcome to Renegade Minis
 ---
 
 <div class="container">
-    <h1>Miniatures available now on MyMiniFactory</h1>
-    <div class="grid product-grid">
-        <div><a href="https://www.myminifactory.com/object/3d-print-frontier-rangers-541649"><img src="/assets/minis/rangers.jpg" /></a></div>
-        <div><a href="https://www.myminifactory.com/object/3d-print-bots-584457"><img src="/assets/minis/robots.jpg" /></a></div>
-        <div><a href="https://www.myminifactory.com/object/3d-print-misfit-crew-541526"><img src="/assets/minis/misfits.jpg" /></a></div>
-        <div><a href="https://www.myminifactory.com/object/3d-print-modular-military-defence-wall-640749"><img src="/assets/terrain/walls.jpg" /></a></div>
-        <div><a href="https://www.myminifactory.com/object/3d-print-reavers-crew-551558"><img src="/assets/minis/reavers.jpg" /></a></div>
-        <div><a href="https://www.myminifactory.com/object/3d-print-modern-scatter-terrain-545531"><img src="/assets/terrain/modern-scatter.jpg" /></a></div>
+  <h1>Miniatures available now on MyMiniFactory</h1>
+  <div class="grid product-grid">
+    <div><a href="https://www.myminifactory.com/object/3d-print-frontier-rangers-541649"><img
+          src="/assets/minis/rangers.jpg" /></a></div>
+    <div><a href="https://www.myminifactory.com/object/3d-print-bots-584457"><img src="/assets/minis/robots.jpg" /></a>
     </div>
+    <div><a href="https://www.myminifactory.com/object/3d-print-misfit-crew-541526"><img
+          src="/assets/minis/misfits.jpg" /></a></div>
+    <div><a href="https://www.myminifactory.com/object/3d-print-modular-military-defence-wall-640749"><img
+          src="/assets/terrain/walls.jpg" /></a></div>
+    <div><a href="https://www.myminifactory.com/object/3d-print-reavers-crew-551558"><img
+          src="/assets/minis/reavers.jpg" /></a></div>
+    <div><a href="https://www.myminifactory.com/object/3d-print-modern-scatter-terrain-545531"><img
+          src="/assets/terrain/modern-scatter.jpg" /></a></div>
+  </div>
+</div>
+
+<hr>
+
+<div class="container">
+  <h1>Latest from the Blog</h1>
+  <article>
+    {% assign latest_post = site.posts.first %}
+    <hgroup>
+      {% if latest_post.stub %}
+      <h2>{{ latest_post.title }}</h2>
+      {% else %}
+      <h2><a href="{{ latest_post.url }}">{{ latest_post.title }}</a></h2>
+      {% endif %}
+      <p class="date">{{ latest_post.date | date: "%b %Y" }}</p>
+    </hgroup>
+
+    {% if latest_post.image %}
+    <div class="blog-img"><img src="{{ latest_post.image }}"></div>
+    {% endif %}
+    {% if latest_post.stub %}
+    {{ latest_post.content }}
+    {% else %}
+    {{ latest_post.excerpt }}
+    <p><a href="{{ latest_post.url }}" class="button">Read more</a></p>
+    {% endif %}
+  </article>
 </div>
