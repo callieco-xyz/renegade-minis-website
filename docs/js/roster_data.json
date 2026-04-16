@@ -1,0 +1,6 @@
+{
+    "skills": [
+        { "name": "Run", "points": 1, "rule": "Example Rules" },
+        { "name": "Dodge", "points": 1, "rule": "Example Rules" }
+    ]
+}
