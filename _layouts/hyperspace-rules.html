@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="en" data-theme="dark">
+
+{% include head.html %}
+
+<body>
+  <header id="default" class="container">
+    <a id="home-logo" href="/">
+      <img src="/assets/site_images/longlogo.jpg">
+    </a>
+    {% include nav.html %}
+  </header>
+
+  <main data-theme="light">
+    <div class="container">
+      <div class="grid grid-hsf">
+        <div>
+          {% if page.sidebar %}
+            {% include sidebars/{{ page.sidebar }}.html %}
+          {% endif %}
+        </div>
+        <div>
+            {% if page.supertitle %} <p class="supertitle">{{ page.supertitle }}</p> {% endif %}
+            <h1 {% if page.supertitle %}class="with-supertitle"{{ page.supertitle }}{% endif %}>{{ page.title }}</h1>
+          {{ content }}
+
+          <p class="back-to-top"><a href="#top">Back to top of page &uparrow; </a></p>
+        </div>
+      </div>
+    </div>
+    <hr>
+  </main>
+
+  {% include footer.html %}
+
+</body>
+
+</html>

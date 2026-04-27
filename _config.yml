@@ -18,10 +18,6 @@ collections:
   posts:
     output: true
     permalink: /:categories/:title
-  games:
-    output: true
-    order:
-      - hyperspace-frontier.md
   commissions:
     output: false
     sort_by: date_added

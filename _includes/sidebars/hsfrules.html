@@ -1,0 +1,59 @@
+<div class="sticky nav-box">
+    <aside>
+        <nav class="sidebar-nav">
+            <ul>
+                <li class="title"><a href="/hyperspace-frontiers">&leftarrow; Back</a></li>
+            </ul>
+        </nav>
+    </aside>
+    <hr>
+    <aside>
+        <nav class="sidebar-nav">
+            <ul>
+                <li class="title">
+                    <a class="{% if page.active == 'rules' %}active{% endif %}"
+                        href="/hyperspace-frontiers/rules/core-rules">{% if page.active == 'rules' %}&rightarrow; {% endif %}Core Rules</a>
+                </li>
+                <hr>
+                <li><a class="{% if page.active == 'intro' %}active{% endif %}"
+                        href="/hyperspace-frontiers/rules/introduction">
+                        {% if page.active == 'intro' %}&rightarrow; {% endif %}Introduction</a></li>
+                <li><a class="{% if page.active == 'getting-started' %}active{% endif %}"
+                        href="/hyperspace-frontiers/rules/01-getting-started/">
+                        {% if page.active == 'getting-started' %}&rightarrow; {% endif %}Getting Started</a></li>
+                <li><a class="{% if page.active == 'playing-a-game' %}active{% endif %}"
+                        href="/hyperspace-frontiers/rules/02-playing-a-game">
+                        {% if page.active == 'playing-a-game' %}&rightarrow; {% endif %}Playing a Game</a></li>
+                <li><a class="{% if page.active == 'actions' %}active{% endif %}"
+                        href="/hyperspace-frontiers/rules/03-actions">
+                        {% if page.active == 'actions' %}&rightarrow; {% endif %}Actions</a></li>
+            </ul>
+        </nav>
+    </aside>
+    <hr>
+    <aside>
+        <nav class="sidebar-nav">
+            <ul>
+                <li class="title">
+                    <a class="{% if page.active == 'crew-guide' %}active{% endif %}"
+                        href="/hyperspace-frontiers/crew-guide/crew-guide">{% if page.active == 'crew-guide' %}&rightarrow; {% endif %}Crew Guide</a>
+                </li>
+                <hr>
+                <li><a class="{% if page.active == 'creating-a-crew' %}active{% endif %}"
+                        href="/hyperspace-frontiers/crew-guide/01-creating-a-crew">
+                        {% if page.active == 'creating-a-crew' %}&rightarrow; {% endif %}Creating a Crew</a></li>
+                <li><a class="{% if page.active == 'getting-started' %}active{% endif %}"
+                        href="/hyperspace-frontiers/crew-guide/02-encounters">
+                        {% if page.active == 'encounters' %}&rightarrow; {% endif %}Encounters</a></li>
+                <li><a class="{% if page.active == 'playing-a-game' %}active{% endif %}"
+                        href="/hyperspace-frontiers/crew-guide/03-campaigns">
+                        {% if page.active == 'campaigns' %}&rightarrow; {% endif %}Campaigns</a></li>
+                <li><a class="{% if page.active == 'actions' %}active{% endif %}"
+                        href="/hyperspace-frontiers/crew-guide/04-crews-of-note">
+                        {% if page.active == 'crews-of-note' %}&rightarrow; {% endif %}Crews of Note</a></li>
+
+            </ul>
+        </nav>
+    </aside>
+    <hr>
+</div>

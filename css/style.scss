@@ -50,7 +50,6 @@
 
 // ROOT
 :root, :host {
-    --pico-font-family-sans-serif: 'Trebuchet MS', system-ui, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, Helvetica, Arial, "Helvetica Neue", sans-serif, var(--pico-font-family-emoji);
     --pico-line-height: 1.35;
 }
 
@@ -60,11 +59,22 @@
 
 h1 {
     text-transform: uppercase;
+    &.with-supertitle {
+        margin-top: 1rem;
+    }
 }
 
-h1 {
-    text-align: center;
+h4, h5, h6 {
+    font-weight: 300;
 }
+
+p.supertitle {
+    --pico-color: var(--pico-muted-color);
+    --pico-font-weight: unset;
+    font-size: 1rem;
+    text-transform: uppercase;
+}
+
 
 footer {
     h6 {
@@ -83,7 +93,18 @@ a {
     }
 }
 
+header a {
+    text-decoration: none;
+    img:hover {
+        transform: none;
+    }
 
+}
+
+.back-to-top {
+    margin-top: 5rem;
+    text-align: right;
+}
 
 // LAYOUT and colours
 html {
@@ -148,6 +169,45 @@ html {
 .pagination nav ul {
     margin: 0 auto
 }
+
+nav.sidebar-nav {
+    li {
+        &.title {
+            font-weight: 600;
+            font-size: 1rem;
+            text-transform: uppercase;
+        }
+
+        a {
+            color: var(--pico-muted-color);
+            letter-spacing: 1px;
+            text-decoration: none;
+            transition: 0.3s ease;
+            transition-property: color;
+
+            &:hover {
+                color: var(--pico-color);
+                transition: 0.3s ease;
+                transition-property: color;
+            }
+
+            &.active {
+                color: var(--pico-color);
+
+                &:hover {
+                    color: var(--pico-color);
+                    transition: 0.3s ease;
+                    transition-property: color;
+                }
+            }
+        }
+    }
+}
+
+.nav-box hr {
+    margin: 0.5rem 2rem 0.5rem auto;
+}
+
 main {
     background-color: var(--pico-background-color);
     .container {
@@ -226,6 +286,10 @@ footer {
 }
 
 
+.grid-hsf {
+    grid-template-columns: 1fr;
+}
+
 @media (min-width: 768px) {
     .footer-grid {
         grid-template-columns: 2fr 1fr;
@@ -235,6 +299,13 @@ footer {
     }
     .minis-grid {
         grid-template-columns: 1fr 1fr;
+    }
+    .grid-hsf {
+        grid-template-columns: 1fr 3fr;
+        .sticky {
+            position: sticky;
+            top: 1rem;
+        }
     }
 }
 

@@ -2807,16 +2807,25 @@ textarea,
   }
 }
 :root, :host {
-  --pico-font-family-sans-serif: "Trebuchet MS", system-ui, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, Helvetica, Arial, "Helvetica Neue", sans-serif, var(--pico-font-family-emoji);
   --pico-line-height: 1.35;
 }
 
 h1 {
   text-transform: uppercase;
 }
+h1.with-supertitle {
+  margin-top: 1rem;
+}
 
-h1 {
-  text-align: center;
+h4, h5, h6 {
+  font-weight: 300;
+}
+
+p.supertitle {
+  --pico-color: var(--pico-muted-color);
+  --pico-font-weight: unset;
+  font-size: 1rem;
+  text-transform: uppercase;
 }
 
 footer h6 {
@@ -2832,6 +2841,18 @@ a img {
 }
 a img:hover {
   transform: scale(1.05);
+}
+
+header a {
+  text-decoration: none;
+}
+header a img:hover {
+  transform: none;
+}
+
+.back-to-top {
+  margin-top: 5rem;
+  text-align: right;
 }
 
 html {
@@ -2890,6 +2911,36 @@ html {
 
 .pagination nav ul {
   margin: 0 auto;
+}
+
+nav.sidebar-nav li.title {
+  font-weight: 600;
+  font-size: 1rem;
+  text-transform: uppercase;
+}
+nav.sidebar-nav li a {
+  color: var(--pico-muted-color);
+  letter-spacing: 1px;
+  text-decoration: none;
+  transition: 0.3s ease;
+  transition-property: color;
+}
+nav.sidebar-nav li a:hover {
+  color: var(--pico-color);
+  transition: 0.3s ease;
+  transition-property: color;
+}
+nav.sidebar-nav li a.active {
+  color: var(--pico-color);
+}
+nav.sidebar-nav li a.active:hover {
+  color: var(--pico-color);
+  transition: 0.3s ease;
+  transition-property: color;
+}
+
+.nav-box hr {
+  margin: 0.5rem 2rem 0.5rem auto;
 }
 
 main {
@@ -2965,6 +3016,10 @@ footer svg {
   grid-template-columns: 1fr;
 }
 
+.grid-hsf {
+  grid-template-columns: 1fr;
+}
+
 @media (min-width: 768px) {
   .footer-grid {
     grid-template-columns: 2fr 1fr;
@@ -2974,6 +3029,13 @@ footer svg {
   }
   .minis-grid {
     grid-template-columns: 1fr 1fr;
+  }
+  .grid-hsf {
+    grid-template-columns: 1fr 3fr;
+  }
+  .grid-hsf .sticky {
+    position: sticky;
+    top: 1rem;
   }
 }
 @media (min-width: 1080px) {
