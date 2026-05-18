@@ -238,6 +238,11 @@ p.caption {
     color: var(--pico-muted-color);
 }
 
+a.promo {
+    display: block;
+    overflow: hidden;
+    margin-bottom: 1rem;
+}
 
 .blog-container {
     h1 {
@@ -323,4 +328,8 @@ footer {
     .product-grid {
         grid-template-columns: 1fr 1fr 1fr;
     }
+}
+
+p.email > span:nth-child(2) {
+	display: none;
 }
