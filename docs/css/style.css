@@ -3003,6 +3003,7 @@ footer svg {
 
 .product-grid {
   grid-template-columns: 1fr 1fr;
+  margin-bottom: 1rem;
 }
 .product-grid a {
   display: block;
