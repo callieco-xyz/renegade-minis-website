@@ -3001,6 +3001,11 @@ footer svg {
   height: 1rem;
 }
 
+progress {
+  margin: 1rem 0 1.5rem;
+  height: 1.5rem;
+}
+
 .product-grid {
   grid-template-columns: 1fr 1fr;
   margin-bottom: 1rem;

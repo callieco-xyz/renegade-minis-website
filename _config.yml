@@ -22,5 +22,6 @@ collections:
     output: false
     sort_by: date_added
   miniatures:
-    output: false
+    output: true
     sort_by: order
+    permalink: /minis/:title

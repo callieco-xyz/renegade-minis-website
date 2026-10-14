@@ -8,10 +8,14 @@ permalink: /minis/
 {% if mini.draft == false %}
     <div class="grid">
         <article>
+            {% if mini.fullpage == true %}
+              <h3><a href="{{ mini.url }}">{{ mini.title }}</a></h3>
+            {% else %}
             <h3>
                 {{ mini.title }}
             </h3>
-            {{ mini.content }}
+            {% endif %}
+            {{ mini.excerpt }}
         </article>
     </div>
 {% endif%}
